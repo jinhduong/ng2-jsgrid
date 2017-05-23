@@ -12,10 +12,10 @@ Angular component is written to jsGrid ([http://js-grid.com/](http://js-grid.com
 
 ## Using
 
-### Pre-step : Add to module
+### Add to module
 ```ts
 ...
-import { JsGridModule } from '../../src/ng2-jsgrid';
+import { JsGridModule } from 'ng2-jsgrid';
 
 @NgModule({
   declarations: [
