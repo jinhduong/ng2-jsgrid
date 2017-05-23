@@ -32,14 +32,14 @@ import { JsGridModule } from 'ng2-jsgrid';
 
 ###1.Basic Scenario - OData Service
 
-- **.html**
+**.html**
 ``` html
 <js-grid [source]="sourceApi" [options]="options" ></js-grid>
 ```
 
-- **.component.ts**
+**.component.ts**
 
-Have two inputs:
+The component have 2 inputs:
 > options: `object` - jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
 > source: `function(filter): Promise<PageResponse>` - The function with input is `filter` and return a promise type is `PageResponse`
   > - filter `object`: {pageIndex:number, pageSize :number, sortField:string, sortOrder:string}
