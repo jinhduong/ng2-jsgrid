@@ -44,7 +44,7 @@ The component have 2 inputs:
 
 > source: `function(filter): Promise<PageResponse>` - The function with input is `filter` and return a promise type is `PageResponse`
   > - filter `object`: {pageIndex:number, pageSize :number, sortField:string, sortOrder:string}
-  > - PageResponse : {itemsCount: number, data: any[]}
+  > - PageResponse `object` : {itemsCount: number, data: any[]}
 [http://js-grid.com/docs/#grid-controller](http://js-grid.com/docs/#grid-controller)
 
 ``` ts
