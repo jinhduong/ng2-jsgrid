@@ -1,0 +1,29 @@
+{
+  "version": "0.0.2",
+  "license": "ISC",
+  "name": "ng2-jsgrid",
+  "description": "Angular2 JsGrid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ng2-jsgrid",
+    "jsgrid-ng2",
+    "angular2-jsgrid",
+    "jsgrid-angular2"
+  ],
+  "author": {
+    "name": "Dinh Duong"
+  },
+  "peerDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "awesome-typescript-loader": "^3.1.3",
+    "jquery": "^3.2.1",
+    "jsgrid": "^1.5.3"
+  },
+  "_id": "ng2-jsgrid@1.0.0",
+  "devDependencies": {},
+  "dependencies": {}
+}
