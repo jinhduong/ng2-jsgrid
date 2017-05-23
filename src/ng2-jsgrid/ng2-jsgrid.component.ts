@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ElementR
 declare var $: any;
 
 @Component({
-    // tslint:disable-next-line:component-selector
     selector: 'js-grid',
     template: `
     <div></div>
