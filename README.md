@@ -1,5 +1,5 @@
 # ng2-jsGrid
-Angular component is written to jsGrid ([http://js-grid.com/](http://js-grid.com/))
+Angular component is written for jsGrid ([http://js-grid.com/](http://js-grid.com/))
 
 ## Requirement
 - jquery
@@ -30,20 +30,21 @@ import { JsGridModule } from 'ng2-jsgrid';
 })
 ```
 
-###1.Basic Scenario - OData Service
+### 1.Basic Scenario - OData Service
 
-- **.html**
+**.html**
 ``` html
 <js-grid [source]="sourceApi" [options]="options" ></js-grid>
 ```
 
-- **.component.ts**
+**.component.ts**
 
-Have two inputs:
+The component have 2 inputs:
 > options: `object` - jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
+
 > source: `function(filter): Promise<PageResponse>` - The function with input is `filter` and return a promise type is `PageResponse`
   > - filter `object`: {pageIndex:number, pageSize :number, sortField:string, sortOrder:string}
-  > - PageResponse : {itemsCount: number, data: any[]}
+  > - PageResponse `object` : {itemsCount: number, data: any[]}
 [http://js-grid.com/docs/#grid-controller](http://js-grid.com/docs/#grid-controller)
 
 ``` ts
@@ -81,8 +82,8 @@ ngOnInit(): void {
   }
 ```
 
-> Note: You can overrite `controller` in `options`.
+> Note: You can overrite `controller` object in `options`.
 
-###2. Use original options
+### 2.Use original options
 
 You just set `useOriginal` property in `options` is `false`.
