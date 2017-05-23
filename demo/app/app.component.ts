@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { PageResponse, FilterModel } from '../../src';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-root',
@@ -7,22 +10,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   options: any;
-  title = 'app works!';
+  sourceApi: any;
+
+  constructor(private http: Http) {
+
+  }
+
   ngOnInit(): void {
+
+    this.sourceApi = (filter: FilterModel) => {
+      console.log(filter);
+      return new Promise(resolve => {
+        this.http.get('https://jsonplaceholder.typicode.com/posts')
+          .map(res => res.json())
+          .subscribe(data => {
+            const source: PageResponse = {
+              data: data,
+              itemsCount: data.length
+            };
+            resolve(source);
+          });
+      });
+    };
+
     this.options = {
-      width: '100%',
-      sorting: true,
-      paging: true,
-
-      data: [
-        { 'Name': 'Dinh', 'Age': 26 },
-        { 'Name': 'Dinh1', 'Age': 26 }
-      ],
-
       fields: [
-        { name: 'Name', type: 'text', width: 150 },
-        { name: 'Age', type: 'number', width: 50 }
-      ]
+        { name: 'userId', type: 'text', width: 50 },
+        { name: 'id', type: 'text', width: 50 },
+        { name: 'title', type: 'text', },
+        { name: 'body', type: 'text', },
+        { type: 'control' }
+      ],
+      editing: true,
+      controller: {
+        updateItem: (item) => {
+          console.log(item);
+          return item;
+        }
+      }
     };
   }
 }

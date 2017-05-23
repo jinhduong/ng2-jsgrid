@@ -1,4 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~jsgrid/css/theme.css';
-@import '~jsgrid/css/jsgrid.css';
+@import '../node_modules/jsgrid/dist/jsgrid-theme.css';
+@import '../node_modules/jsgrid/dist/jsgrid.css';
