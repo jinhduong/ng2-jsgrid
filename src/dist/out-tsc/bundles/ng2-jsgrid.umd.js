@@ -7,7 +7,7 @@
 		exports["ng2-jsgrid.umd"] = factory(require("@angular/core"), require("@angular/common"));
 	else
 		root["ng2-jsgrid.umd"] = factory(root["@angular/core"], root["@angular/common"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_4__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_5__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,11 +73,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Common = (function () {
+    function Common() {
+    }
+    Common.gridIsEmpty = function ($grid) {
+        if (!$grid)
+            return true;
+        return $grid.html() === '';
+    };
+    return Common;
+}());
+exports.Common = Common;
+;
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -92,24 +113,96 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(1);
+var core_1 = __webpack_require__(2);
+var jsgrid_common_1 = __webpack_require__(0);
 var JsGridComponent = (function () {
     function JsGridComponent(elemRef) {
+        var _this = this;
         this.elemRef = elemRef;
+        this._options = {
+            width: '100%',
+            autoload: true,
+            paging: true,
+            sorting: true,
+            pageLoading: true,
+            pageSize: 15,
+            pageIndex: 1,
+            controller: {
+                loadData: function (filter) {
+                    return _this.source(filter);
+                }
+            },
+            useOriginal: false
+        };
+        this.pageChanged = new core_1.EventEmitter();
     }
+    Object.defineProperty(JsGridComponent.prototype, "options", {
+        get: function () {
+            return this._options;
+        },
+        set: function (val) {
+            // If it is true, use original options from jsGrid
+            if (val.useOriginal)
+                this._options = val;
+            else {
+                // Assign controller object
+                if (val.controller)
+                    val.controller = Object.assign(this._options.controller, val.controller);
+                // Merge options
+                this._options = Object.assign(this._options, val);
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(JsGridComponent.prototype, "source", {
+        get: function () {
+            return this._source;
+        },
+        // @Output() sourceChange = new EventEmitter<Function>();
+        set: function (val) {
+            var gridIsRendered = !jsgrid_common_1.Common.gridIsEmpty(this._$gridElem);
+            this._source = val;
+            // this.sourceChange.emit(val);
+            if (gridIsRendered) {
+                this.reRenderGrid();
+            }
+            else {
+                this.renderGrid();
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     JsGridComponent.prototype.ngOnInit = function () {
+    };
+    JsGridComponent.prototype.ngAfterViewInit = function () {
+    };
+    /* Private functions*/
+    JsGridComponent.prototype.renderGrid = function () {
         var $nativeElement = $(this.elemRef.nativeElement);
         this._$gridElem = $nativeElement.find('div:first');
         this._$gridElem.jsGrid(this.options);
     };
-    JsGridComponent.prototype.ngAfterViewInit = function () {
+    JsGridComponent.prototype.reRenderGrid = function () {
+        this._$gridElem.jsGrid('loadData', this.source);
     };
     return JsGridComponent;
 }());
 __decorate([
     core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], JsGridComponent.prototype, "options", null);
+__decorate([
+    core_1.Output(),
     __metadata("design:type", Object)
-], JsGridComponent.prototype, "options", void 0);
+], JsGridComponent.prototype, "pageChanged", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Function])
+], JsGridComponent.prototype, "source", null);
 JsGridComponent = __decorate([
     core_1.Component({
         selector: 'js-grid',
@@ -121,13 +214,13 @@ exports.JsGridComponent = JsGridComponent;
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -139,9 +232,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(1);
-var common_1 = __webpack_require__(4);
-var ng2_jsgrid_component_1 = __webpack_require__(0);
+var core_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(5);
+var ng2_jsgrid_component_1 = __webpack_require__(1);
 var JsGridModule = (function () {
     function JsGridModule() {
     }
@@ -158,7 +251,7 @@ exports.JsGridModule = JsGridModule;
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -167,15 +260,16 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(2));
+__export(__webpack_require__(3));
+__export(__webpack_require__(1));
 __export(__webpack_require__(0));
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
 
 /***/ })
 /******/ ]);

@@ -1,4 +1,5 @@
-# Ng2Jsgrid
+# ng2-jsGrid
+Angular component is written to jsGrid ([http://js-grid.com/](http://js-grid.com/))
 
 ## Requirement
 - jquery
@@ -9,16 +10,19 @@
 - `npm install jsgrid --save`
 - `npm install ng2-jsgrid --save`
 
-## Example
+## Using
 
-module:
-```
+### Add to module
+```ts
+...
 import { JsGridModule } from 'ng2-jsgrid';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    ...
     JsGridModule
   ],
   providers: [],
@@ -26,29 +30,59 @@ import { JsGridModule } from 'ng2-jsgrid';
 })
 ```
 
-html: 
-```
-<js-grid [options]="options" ></js-grid>
+###1.Basic Scenario - OData Service
+
+- **.html**
+``` html
+<js-grid [source]="sourceApi" [options]="options" ></js-grid>
 ```
 
-.ts:
-```
+- **.component.ts**
+
+Have two inputs:
+> options: `object` - jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
+> source: `function(filter): Promise<PageResponse>` - The function with input is `filter` and return a promise type is `PageResponse`
+  > - filter `object`: {pageIndex:number, pageSize :number, sortField:string, sortOrder:string}
+  > - PageResponse : {itemsCount: number, data: any[]}
+[http://js-grid.com/docs/#grid-controller](http://js-grid.com/docs/#grid-controller)
+
+``` ts
 options: any;
+sourceApi: any;
+
+constructor(private http: Http) {
+
+}
+
 ngOnInit(): void {
+    this.sourceApi = (filter: FilterModel) => {
+      return new Promise(resolve => {
+        this.http.get('https://jsonplaceholder.typicode.com/posts')
+          .map(res => res.json())
+          .subscribe(data => {
+            const source: PageResponse = {
+              data: data,
+              itemsCount: data.length
+            };
+            resolve(source);
+          });
+      });
+    };
+
     this.options = {
-      width: '100%',
-      sorting: true,
-      paging: true,
-
-      data: [
-        { 'Name': 'Dinh', 'Age': 26 },
-        { 'Name': 'Dinh1', 'Age': 26 }
-      ],
-
       fields: [
-        { name: 'Name', type: 'text', width: 150 },
-        { name: 'Age', type: 'number', width: 50 }
+        { name: 'userId', type: 'text', width: 50 },
+        { name: 'id', type: 'text', width: 50 },
+        { name: 'title', type: 'text', },
+        { name: 'body', type: 'text', },
+        { type: 'control' }
       ]
     };
   }
 ```
+
+> Note: You can overrite `controller` in `options`.
+
+###2. Use original options
+
+You just set `useOriginal` property in `options` is `false`.

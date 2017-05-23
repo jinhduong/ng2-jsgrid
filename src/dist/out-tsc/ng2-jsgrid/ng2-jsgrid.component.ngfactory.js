@@ -30,5 +30,8 @@ function View_JsGridComponent_Host_0(l) {
         ck(v, 1, 0);
     }, null);
 }
-exports.JsGridComponentNgFactory = import0.ɵccf('js-grid', import1.JsGridComponent, View_JsGridComponent_Host_0, { options: 'options' }, {}, []);
+exports.JsGridComponentNgFactory = import0.ɵccf('js-grid', import1.JsGridComponent, View_JsGridComponent_Host_0, {
+    options: 'options',
+    source: 'source'
+}, { pageChanged: 'pageChanged' }, []);
 //# sourceMappingURL=ng2-jsgrid.component.ngfactory.js.map

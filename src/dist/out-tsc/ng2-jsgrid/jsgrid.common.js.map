@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../ng2-jsgrid/jsgrid.common.ts"],"names":[],"mappings":";;AAAA;IAAA;IAKA,CAAC;IAJiB,kBAAW,GAAzB,UAA0B,KAAK;QAC3B,EAAE,CAAC,CAAC,CAAC,KAAK,CAAC;YAAC,MAAM,CAAC,IAAI,CAAC;QACxB,MAAM,CAAC,KAAK,CAAC,IAAI,EAAE,KAAK,EAAE,CAAC;IAC/B,CAAC;IACL,aAAC;AAAD,CALA,AAKC,IAAA;AALY,wBAAM;AAKlB,CAAC","file":"jsgrid.common.js","sourceRoot":""}

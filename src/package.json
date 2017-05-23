@@ -1,6 +1,6 @@
 {
   "name": "ng2-jsgrid",
-  "version": "0.0.41",
+  "version": "0.0.5",
   "description": "Angular2 JsGrid",
   "main": "index.js",
   "scripts": {
