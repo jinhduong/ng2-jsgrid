@@ -30,7 +30,7 @@ import { JsGridModule } from 'ng2-jsgrid';
 })
 ```
 
-###1.Basic Scenario - OData Service
+### 1.Basic Scenario - OData Service
 
 **.html**
 ``` html
@@ -84,6 +84,6 @@ ngOnInit(): void {
 
 > Note: You can overrite `controller` in `options`.
 
-###2. Use original options
+### 2.Use original options
 
 You just set `useOriginal` property in `options` is `false`.
