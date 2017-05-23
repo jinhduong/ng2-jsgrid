@@ -1,6 +1,30 @@
 # Ng2Jsgrid
 
+## Requirement
+- jquery
+- jsgrid
+
+## Install
+- `npm install jquery --save`
+- `npm install jsgrid --save`
+- `npm install ng2-jsgrid --save`
+
 ## Example
+
+module:
+```
+import { JsGridModule } from 'ng2-jsgrid';
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    JsGridModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+```
 
 html: 
 ```

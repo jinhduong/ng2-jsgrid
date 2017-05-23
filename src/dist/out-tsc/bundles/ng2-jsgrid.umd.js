@@ -112,7 +112,6 @@ __decorate([
 ], JsGridComponent.prototype, "options", void 0);
 JsGridComponent = __decorate([
     core_1.Component({
-        // tslint:disable-next-line:component-selector
         selector: 'js-grid',
         template: "\n    <div></div>\n    ",
     }),

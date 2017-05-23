@@ -16,7 +16,6 @@ var JsGridComponent = (function () {
 }());
 JsGridComponent.decorators = [
     { type: core_1.Component, args: [{
-                // tslint:disable-next-line:component-selector
                 selector: 'js-grid',
                 template: "\n    <div></div>\n    ",
             },] },

@@ -1,6 +1,6 @@
 {
   "name": "ng2-jsgrid",
-  "version": "1.0.0",
+  "version": "0.0.41",
   "description": "Angular2 JsGrid",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,14 @@
     "jsgrid-angular2"
   ],
   "author": "Dinh Duong",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jinhduong/ng2-jsgrid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinhduong/ng2-jsgrid/issues"
+  },
+  "homepage": "https://github.com/jinhduong/ng2-jsgrid#readme",
   "license": "ISC",
   "peerDependencies": {
     "@angular/common": "^4.1.3",
