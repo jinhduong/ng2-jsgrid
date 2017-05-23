@@ -82,7 +82,7 @@ ngOnInit(): void {
   }
 ```
 
-> Note: You can overrite `controller` in `options`.
+> Note: You can overrite `controller` object in `options`.
 
 ### 2.Use original options
 
