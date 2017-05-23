@@ -1,5 +1,5 @@
 # ng2-jsGrid
-Angular component is written to jsGrid ([http://js-grid.com/](http://js-grid.com/))
+Angular component is written for jsGrid ([http://js-grid.com/](http://js-grid.com/))
 
 ## Requirement
 - jquery
