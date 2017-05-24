@@ -32,21 +32,24 @@ import { JsGridModule } from 'ng2-jsgrid';
 
 ### Component parameters
 
-> options `object`: jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
+- **options** `object`: jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
 
-> source `function(filter) => Promise<PageResponse>`: jsGrid source function api
+- **source** `function(filter) => Promise<PageResponse>`: jsGrid source function api
+
     - filter `object`: {
         pageIndex:number,
         pageSize :number,
         sortField:string,
         sortOrder:string
       }
+      
     - PageResponse `object`: {
         itemsCount: number,
         data: any[]
       }
 
-> action `ODataController` : The actions since use ODataService
+- **action** `ODataController` : The actions since use ODataService
+
     - ODataController `object`{
         insertItem: function(item),
         updateItem: function(item),
