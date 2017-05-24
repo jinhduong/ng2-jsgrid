@@ -36,25 +36,28 @@ import { JsGridModule } from 'ng2-jsgrid';
 
 - **source** `function(filter) => Promise<PageResponse>`: jsGrid source function api
 
-    - filter `object`: `{
+    - filter `object`: 
+    ```{
         pageIndex:number,
         pageSize :number,
         sortField:string,
         sortOrder:string
-      }`
+      }```
       
-    - PageResponse `object`: `{
+    - PageResponse `object`: 
+    ```{
         itemsCount: number,
         data: any[]
-      }`
+      }```
 
 - **action** `ODataController` : The actions since use ODataService
 
-    - ODataController `object``{
+    - ODataController `object`
+    ```{
         insertItem: function(item),
         updateItem: function(item),
         deleteItem: function(item)
-      }`
+      }```
 
 ### 1.Basic Scenario - OData Service
 
