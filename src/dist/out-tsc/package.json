@@ -1,5 +1,5 @@
 {
-  "version": "0.0.5",
+  "version": "0.0.53",
   "license": "ISC",
   "name": "ng2-jsgrid",
   "description": "Angular2 JsGrid",
@@ -31,7 +31,7 @@
     "jquery": "^3.2.1",
     "jsgrid": "^1.5.3"
   },
-  "_id": "ng2-jsgrid@0.0.41",
+  "_id": "ng2-jsgrid@0.0.53",
   "devDependencies": {},
   "dependencies": {}
 }

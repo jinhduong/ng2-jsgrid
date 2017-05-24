@@ -13,7 +13,7 @@ Angular component is written to jsGrid ([http://js-grid.com/](http://js-grid.com
 ## Using
 
 ### Add to module
-```ts
+```js
 ...
 import { JsGridModule } from 'ng2-jsgrid';
 
@@ -41,12 +41,13 @@ import { JsGridModule } from 'ng2-jsgrid';
 
 Have two inputs:
 > options: `object` - jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
+
 > source: `function(filter): Promise<PageResponse>` - The function with input is `filter` and return a promise type is `PageResponse`
   > - filter `object`: {pageIndex:number, pageSize :number, sortField:string, sortOrder:string}
-  > - PageResponse : {itemsCount: number, data: any[]}
+  > - PageResponse `object` : {itemsCount: number, data: any[]}
 [http://js-grid.com/docs/#grid-controller](http://js-grid.com/docs/#grid-controller)
 
-``` ts
+``` js
 options: any;
 sourceApi: any;
 
