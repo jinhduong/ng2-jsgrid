@@ -35,12 +35,14 @@ import { JsGridModule } from 'ng2-jsgrid';
 > options `object`: jsGrid options config ([http://js-grid.com/docs/#configuration](http://js-grid.com/docs/#configuration))
 
 > source `function(filter) => Promise<PageResponse>`: jsGrid source function api
+
   > filter `object`: {
     pageIndex:number,
     pageSize :number,
     sortField:string,
     sortOrder:string
   }
+  
   > PageResponse `object`: {
     itemsCount: number,
     data: any[]
