@@ -49,6 +49,7 @@ import { JsGridModule } from 'ng2-jsgrid';
   }
 
 > action `ODataController` : The actions since use ODataService
+
   > ODataController `object`{
     insertItem: function(item),
     updateItem: function(item),
