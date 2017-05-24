@@ -60,7 +60,7 @@ import { JsGridModule } from 'ng2-jsgrid';
 
 **.html**
 ``` html
-<js-grid [source]="sourceApi" [options]="options" ></js-grid>
+<js-grid [action]="gridAction" [source]="sourceApi" [options]="options" ></js-grid>
 ```
 
 **.component.ts**
