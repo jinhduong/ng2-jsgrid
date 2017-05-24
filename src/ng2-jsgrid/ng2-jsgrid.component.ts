@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
-import { FilterModel, PageResponse } from './jsgrid.models';
+import { FilterModel, PageResponse, ODataController } from './jsgrid.models';
 import { Common } from './jsgrid.common';
 declare var $: any;
 
@@ -11,6 +11,8 @@ declare var $: any;
 })
 export class JsGridComponent implements OnInit, AfterViewInit {
 
+    @Input() action: ODataController;
+    private _$gridElem;
     private _options = {
         width: '100%',
         autoload: true,
@@ -22,7 +24,10 @@ export class JsGridComponent implements OnInit, AfterViewInit {
         controller: {
             loadData: (filter: FilterModel) => {
                 return this.source(filter);
-            }
+            },
+            insertItem: this.action ? this.action.insertItem : undefined,
+            updateItem: this.action ? this.action.updateItem : undefined,
+            deleteItem: this.action ? this.action.deleteItem : undefined
         },
         useOriginal: false
     };
@@ -39,6 +44,12 @@ export class JsGridComponent implements OnInit, AfterViewInit {
         }
     }
     get options() {
+        if (this.action) {
+            this._options.controller.updateItem = this.action.updateItem;
+            this._options.controller.insertItem = this.action.insertItem;
+            this._options.controller.deleteItem = this.action.deleteItem;
+        }
+
         return this._options;
     }
     @Output() pageChanged = new EventEmitter<FilterModel>();
@@ -61,7 +72,6 @@ export class JsGridComponent implements OnInit, AfterViewInit {
         return this._source;
     }
 
-    private _$gridElem;
 
 
     constructor(private elemRef: ElementRef) {

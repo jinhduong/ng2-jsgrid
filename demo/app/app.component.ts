@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { PageResponse, FilterModel } from '../../src';
+import { PageResponse, FilterModel, ODataController } from '../../src';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -11,12 +11,26 @@ import 'rxjs/add/operator/map';
 export class AppComponent implements OnInit {
   options: any;
   sourceApi: any;
+  gridAction = new ODataController();
 
   constructor(private http: Http) {
 
   }
 
   ngOnInit(): void {
+
+    this.gridAction.updateItem = (item) => {
+      console.log(item);
+      return new Promise(resolve => {
+        resolve(item);
+      });
+    };
+
+    this.gridAction.insertItem = (item) => {
+      return new Promise(resolve => {
+        resolve(item);
+      });
+    };
 
     this.sourceApi = (filter: FilterModel) => {
       console.log(filter);
@@ -41,13 +55,8 @@ export class AppComponent implements OnInit {
         { name: 'body', type: 'text', },
         { type: 'control' }
       ],
-      editing: true,
-      controller: {
-        updateItem: (item) => {
-          console.log(item);
-          return item;
-        }
-      }
+      inserting: true,
+      editing: true
     };
   }
 }
