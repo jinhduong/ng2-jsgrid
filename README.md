@@ -37,6 +37,7 @@ import { JsGridModule } from 'ng2-jsgrid';
 - **source** `function(filter) => Promise<PageResponse>`: jsGrid source function api
 
     - filter `object`: 
+    
     ```{
         pageIndex:number,
         pageSize :number,
@@ -45,6 +46,7 @@ import { JsGridModule } from 'ng2-jsgrid';
       }```
       
     - PageResponse `object`: 
+    
     ```{
         itemsCount: number,
         data: any[]
@@ -53,6 +55,7 @@ import { JsGridModule } from 'ng2-jsgrid';
 - **action** `ODataController` : The actions since use ODataService
 
     - ODataController `object`
+    
     ```{
         insertItem: function(item),
         updateItem: function(item),
