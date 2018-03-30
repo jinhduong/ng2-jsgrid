@@ -68,14 +68,14 @@
                                     <a href="../modules/AppModule.html" >AppModule</a>
                                         <li class="chapter inner">
                                             <div class="simple menu-toggler" data-toggle="collapse"
-                                                    data-target="#xs-components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                    data-target="#xs-components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                                                 >
                                                 <span class="fa fa-fw fa-cogs"></span>
                                                 <span>Components</span>
                                                 <span class="fa fa-angle-down"></span>
                                             </div>
                                             <ul class="links collapse"
-                                                    id="xs-components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                    id="xs-components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                                                 >
                                                     <li class="link">
                                                         <a href="../components/AppComponent.html"  data-type="entity-link" data-context="sub-entity" data-context-id="modules" class="active" >AppComponent</a>
@@ -87,14 +87,14 @@
                                     <a href="../modules/GridModule.html" >GridModule</a>
                                         <li class="chapter inner">
                                             <div class="simple menu-toggler" data-toggle="collapse"
-                                                    data-target="#xs-components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                    data-target="#xs-components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                                                 >
                                                 <span class="fa fa-fw fa-cogs"></span>
                                                 <span>Components</span>
                                                 <span class="fa fa-angle-down"></span>
                                             </div>
                                             <ul class="links collapse"
-                                                    id="xs-components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                    id="xs-components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                                                 >
                                                     <li class="link">
                                                         <a href="../components/GridComponent.html" >GridComponent</a>
@@ -118,6 +118,9 @@
                         <ul class="links collapse "
                                 id="xs-classes-links"
                             >
+                                <li class="link">
+                                    <a href="../classes/GridHtmlTemplate-1.html" >GridHtmlTemplate</a>
+                                </li>
                                 <li class="link">
                                     <a href="../classes/GridHtmlTemplate.html" >GridHtmlTemplate</a>
                                 </li>
@@ -234,14 +237,14 @@
                                            <a href="../modules/AppModule.html" >AppModule</a>
                                                <li class="chapter inner">
                                                    <div class="simple menu-toggler" data-toggle="collapse"
-                                                           data-target="#components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                           data-target="#components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                    >
                                                        <span class="fa fa-fw fa-cogs"></span>
                                                        <span>Components</span>
                                                        <span class="fa fa-angle-down"></span>
                                                    </div>
                                                    <ul class="links collapse"
-                                                           id="components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                           id="components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                    >
                                                            <li class="link">
                                                                <a href="../components/AppComponent.html"  data-type="entity-link" data-context="sub-entity" data-context-id="modules" class="active" >AppComponent</a>
@@ -253,14 +256,14 @@
                                            <a href="../modules/GridModule.html" >GridModule</a>
                                                <li class="chapter inner">
                                                    <div class="simple menu-toggler" data-toggle="collapse"
-                                                           data-target="#components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                           data-target="#components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                    >
                                                        <span class="fa fa-fw fa-cogs"></span>
                                                        <span>Components</span>
                                                        <span class="fa fa-angle-down"></span>
                                                    </div>
                                                    <ul class="links collapse"
-                                                           id="components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                           id="components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                    >
                                                            <li class="link">
                                                                <a href="../components/GridComponent.html" >GridComponent</a>
@@ -284,6 +287,9 @@
                                <ul class="links collapse "
                                        id="classes-links"
                    >
+                                       <li class="link">
+                                           <a href="../classes/GridHtmlTemplate-1.html" >GridHtmlTemplate</a>
+                                       </li>
                                        <li class="link">
                                            <a href="../classes/GridHtmlTemplate.html" >GridHtmlTemplate</a>
                                        </li>
@@ -382,6 +388,12 @@
 
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
 
 
 <section>
@@ -408,7 +420,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;sample-component&gt;&lt;/sample-component&gt;</code></pre></td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;app-grid [api]&#x3D;&quot;api&quot; [fields]&#x3D;&quot;fields&quot; &gt;&lt;/app-grid&gt;</code></pre></td>
             </tr>
 
 
@@ -417,37 +429,216 @@
     </table>
 </section>
 
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#api">api</a>
+                            </li>
+                            <li>
+                                <a href="#fields">fields</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
 
 
 
 
 
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <span class="name">
+                                <b>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">playground/index.ts:26</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="api"></a>
+                            <span class="name">
+                                <b>
+                                api
+                                </b>
+                                <a href="#api"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>api:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>async (filter) &#x3D;&gt; {
+        return {
+          itemsCount: 12,
+          data: [
+            { name: &#x27;DINH&#x27;, age: 12 },
+            { name: &#x27;DINH22&#x27;, age: 16 },
+          ]
+        };
+      }</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">playground/index.ts:17</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="fields"></a>
+                            <span class="name">
+                                <b>
+                                fields
+                                </b>
+                                <a href="#fields"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>fields:     <code><a href="../interfaces/Field.html" target="_self" >Field[]</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../interfaces/Field.html" target="_self" >Field[]</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">playground/index.ts:16</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
 
 </div>
 
 
     <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
-import { NgModule } from &#x27;@angular/core&#x27;;
+import { NgModule, OnInit } from &#x27;@angular/core&#x27;;
 import { Component } from &#x27;@angular/core&#x27;;
 import { platformBrowserDynamic } from &#x27;@angular/platform-browser-dynamic&#x27;;
 
-import { SampleModule }  from &#x27;ng2-jsgrid&#x27;;
+import { GridModule } from &#x27;ng2-jsgrid&#x27;;
 
 @Component({
   selector: &#x27;app&#x27;,
-  template: &#x60;&lt;sample-component&gt;&lt;/sample-component&gt;&#x60;
+  template: &#x60;&lt;app-grid [api]&#x3D;&quot;api&quot; [fields]&#x3D;&quot;fields&quot; &gt;&lt;/app-grid&gt;&#x60;
 })
-class AppComponent {}
+class AppComponent implements OnInit {
+  fields: Field[];
+  api &#x3D; async (filter) &#x3D;&gt; {
+    return {
+      itemsCount: 12,
+      data: [
+        { name: &#x27;DINH&#x27;, age: 12 },
+        { name: &#x27;DINH22&#x27;, age: 16 },
+      ]
+    };
+  }
+  ngOnInit(): void {
+    this.fields &#x3D; [
+      { name: &#x27;name&#x27;, title: &#x27;Name&#x27; },
+      { name: &#x27;age&#x27;, title: &#x27;Age&#x27; }
+    ];
+  }
+}
 
 @NgModule({
-  bootstrap: [ AppComponent ],
-  declarations: [ AppComponent ],
-  imports: [ BrowserModule, SampleModule ]
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
+  imports: [BrowserModule, GridModule]
 })
-class AppModule {}
+class AppModule { }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 </code></pre>
@@ -477,7 +668,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><sample-component></sample-component></div>'
+        var COMPONENT_TEMPLATE = '<div><app-grid [api]="api" [fields]="fields" ></app-grid></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app'},{'name': 'GridComponent', 'selector': 'app-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};

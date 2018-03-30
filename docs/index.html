@@ -68,14 +68,14 @@
                                     <a href="./modules/AppModule.html" >AppModule</a>
                                         <li class="chapter inner">
                                             <div class="simple menu-toggler" data-toggle="collapse"
-                                                    data-target="#xs-components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                    data-target="#xs-components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                                                 >
                                                 <span class="fa fa-fw fa-cogs"></span>
                                                 <span>Components</span>
                                                 <span class="fa fa-angle-down"></span>
                                             </div>
                                             <ul class="links collapse"
-                                                    id="xs-components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                    id="xs-components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                                                 >
                                                     <li class="link">
                                                         <a href="./components/AppComponent.html" >AppComponent</a>
@@ -87,14 +87,14 @@
                                     <a href="./modules/GridModule.html" >GridModule</a>
                                         <li class="chapter inner">
                                             <div class="simple menu-toggler" data-toggle="collapse"
-                                                    data-target="#xs-components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                    data-target="#xs-components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                                                 >
                                                 <span class="fa fa-fw fa-cogs"></span>
                                                 <span>Components</span>
                                                 <span class="fa fa-angle-down"></span>
                                             </div>
                                             <ul class="links collapse"
-                                                    id="xs-components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                    id="xs-components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                                                 >
                                                     <li class="link">
                                                         <a href="./components/GridComponent.html" >GridComponent</a>
@@ -118,6 +118,9 @@
                         <ul class="links collapse "
                                 id="xs-classes-links"
                             >
+                                <li class="link">
+                                    <a href="./classes/GridHtmlTemplate-1.html" >GridHtmlTemplate</a>
+                                </li>
                                 <li class="link">
                                     <a href="./classes/GridHtmlTemplate.html" >GridHtmlTemplate</a>
                                 </li>
@@ -234,14 +237,14 @@
                                            <a href="./modules/AppModule.html" >AppModule</a>
                                                <li class="chapter inner">
                                                    <div class="simple menu-toggler" data-toggle="collapse"
-                                                           data-target="#components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                           data-target="#components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                    >
                                                        <span class="fa fa-fw fa-cogs"></span>
                                                        <span>Components</span>
                                                        <span class="fa fa-angle-down"></span>
                                                    </div>
                                                    <ul class="links collapse"
-                                                           id="components-links-module-AppModule-45d2dfd4-2d18-48bc-8344-d1f3085a0cae"
+                                                           id="components-links-module-AppModule-eaacac7c-f0e5-49d8-bce8-f04721127026"
                    >
                                                            <li class="link">
                                                                <a href="./components/AppComponent.html" >AppComponent</a>
@@ -253,14 +256,14 @@
                                            <a href="./modules/GridModule.html" >GridModule</a>
                                                <li class="chapter inner">
                                                    <div class="simple menu-toggler" data-toggle="collapse"
-                                                           data-target="#components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                           data-target="#components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                    >
                                                        <span class="fa fa-fw fa-cogs"></span>
                                                        <span>Components</span>
                                                        <span class="fa fa-angle-down"></span>
                                                    </div>
                                                    <ul class="links collapse"
-                                                           id="components-links-module-GridModule-38ed7903-ed4b-4932-a3f3-6a2166c464b6"
+                                                           id="components-links-module-GridModule-5b263a1b-ade9-4161-849a-1ee422529007"
                    >
                                                            <li class="link">
                                                                <a href="./components/GridComponent.html" >GridComponent</a>
@@ -284,6 +287,9 @@
                                <ul class="links collapse "
                                        id="classes-links"
                    >
+                                       <li class="link">
+                                           <a href="./classes/GridHtmlTemplate-1.html" >GridHtmlTemplate</a>
+                                       </li>
                                        <li class="link">
                                            <a href="./classes/GridHtmlTemplate.html" >GridHtmlTemplate</a>
                                        </li>
@@ -361,8 +367,8 @@ import { NgModule } from &#39;&#64;angular/core&#39;;
 
 import { AppComponent } from &#39;./app.component&#39;;
 
-// Import your library
-import { SampleModule } from &#39;ng2-jsgrid&#39;;
+// Import
+import { GridModule } from &#39;ng2-jsgrid&#39;;
 
 &#64;NgModule({
   declarations: [
@@ -370,19 +376,52 @@ import { SampleModule } from &#39;ng2-jsgrid&#39;;
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    GridModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }</code></pre><p>Once your library is imported, you can use its components, directives and pipes in your Angular application:</p>
-<pre class="line-numbers"><code class="language-xml">&lt;!-- You can now use your library component in app.component.html --&gt;
-&lt;h1&gt;
-  {{title}}
-&lt;/h1&gt;
-&lt;sampleComponent&gt;&lt;/sampleComponent&gt;</code></pre><h2 id="development">Development</h2>
+<pre class="line-numbers"><code class="language-typescript">import { Component, OnInit } from &#39;&#64;angular/core&#39;;
+import { Field } from &#39;ng2-jsgrid&#39;;
+
+&#64;Component({
+  selector: &#39;app-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.css&#39;]
+})
+export class AppComponent implements OnInit {
+  fields: Field[];
+  api = async (filter) =&gt; {
+    // Call from API with current filter
+    // Some samples:
+    // const result = await this._someService.getDate(filter).toPromise();
+
+    console.log(filter);
+
+    const promise = new Promise((res) =&gt; {
+      setTimeout(() =&gt; {
+        res({
+          itemsCount: 12,
+          data: [
+            { name: &#39;John&#39;, age: 30 },
+            { name: &#39;Smith&#39;, age: 46 },
+          ]
+        });
+      }, 3000);
+    });
+
+    const result = await promise;
+    return result;
+  }
+  ngOnInit(): void {
+    this.fields = [
+      { name: &#39;name&#39;, title: &#39;Name&#39; },
+      { name: &#39;age&#39;, title: &#39;Age&#39; }
+    ];
+  }
+}
+</code></pre><h2 id="development">Development</h2>
 <p>To generate all <code>*.js</code>, <code>*.d.ts</code> and <code>*.metadata.json</code> files:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm run build</code></pre><p>To lint all <code>*.ts</code> files:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm run lint</code></pre><h2 id="license">License</h2>
