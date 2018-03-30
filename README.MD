@@ -9,9 +9,12 @@ $ npm install ng2-jsgrid --save
 ```
 
 ## Documents
+
 https://jinhduong.github.io/ng2-jsgrid/index.html
 
-and then from your Angular `AppModule`:
+## Usage
+
+Firstly, add `GridModule` into your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -36,7 +39,7 @@ import { GridModule } from 'ng2-jsgrid';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once your library is imported, you can use it in your component
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
