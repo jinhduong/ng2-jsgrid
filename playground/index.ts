@@ -2,23 +2,40 @@
  * This is only for local test
  */
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { SampleModule }  from 'ng2-jsgrid';
+import { GridModule } from 'ng2-jsgrid';
 
 @Component({
   selector: 'app',
-  template: `<sample-component></sample-component>`
+  template: `<app-grid [api]="api" [fields]="fields" ></app-grid>`
 })
-class AppComponent {}
+class AppComponent implements OnInit {
+  fields: Field[];
+  api = async (filter) => {
+    return {
+      itemsCount: 12,
+      data: [
+        { name: 'DINH', age: 12 },
+        { name: 'DINH22', age: 16 },
+      ]
+    };
+  }
+  ngOnInit(): void {
+    this.fields = [
+      { name: 'name', title: 'Name' },
+      { name: 'age', title: 'Age' }
+    ];
+  }
+}
 
 @NgModule({
-  bootstrap: [ AppComponent ],
-  declarations: [ AppComponent ],
-  imports: [ BrowserModule, SampleModule ]
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
+  imports: [BrowserModule, GridModule]
 })
-class AppModule {}
+class AppModule { }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
