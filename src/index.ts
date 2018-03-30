@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GridComponent } from 'grid.component';
+import { GridComponent } from './grid.component';
 
 export * from './interfaces/callback.interface';
 export * from './interfaces/field.interface';

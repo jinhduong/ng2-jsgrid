@@ -4,8 +4,7 @@
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GridComponent } from 'grid.component';
-export { GridComponent } from './grid.component';
+import { GridComponent } from './grid.component';
 var GridModule = (function () {
     function GridModule() {
     }

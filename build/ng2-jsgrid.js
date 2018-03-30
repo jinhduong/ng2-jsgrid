@@ -5,4 +5,5 @@
 /**
  * Generated bundle index. Do not edit.
  */
-export { GridModule, GridComponent } from './index';
+export { GridModule } from './index';
+export { GridComponent as ɵa } from './grid.component';
