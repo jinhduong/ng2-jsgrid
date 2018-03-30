@@ -192,8 +192,8 @@ gulp.task('compile', function () {
     'copy:build',
     'copy:manifest',
     'copy:readme',
-    'clean:build',
-    'clean:tmp',
+    // 'clean:build',
+     'clean:tmp',
     function (err) {
       if (err) {
         console.log('ERROR:', err.message);

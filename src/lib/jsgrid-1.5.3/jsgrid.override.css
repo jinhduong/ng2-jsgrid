@@ -1,0 +1,31 @@
+.jsgrid-grid-header, .jsgrid-grid-body{ min-width: 900px;}
+.jsgrid-header-sort-asc:before,
+.jsgrid-header-sort-desc:before {
+    margin-top: 6px;
+    margin-right: 5px;
+}
+
+.jsgrid {
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.jsgrid-cell {
+    padding: 5px;
+    word-wrap: break-word;
+}
+.jsgrid-header-row>.jsgrid-header-cell {
+    font-weight: 500;
+}
+
+.jsgrid-button {
+    min-height: auto !important;
+}
+
+.jsgrid input[type="text"],
+.jsgrid input[type="number"],
+.jsgrid select {
+    max-height: 28px !important;
+    min-height: 28px !important;
+    padding: 0em 0.2em !important;
+}
