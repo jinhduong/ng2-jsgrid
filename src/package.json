@@ -1,0 +1,28 @@
+{
+  "name": "ng2-jsgrid",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinhduong/ng2-jsgrid"
+  },
+  "author": {
+    "name": "jinhduong",
+    "email": "0961020@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinhduong/ng2-jsgrid/issues"
+  },
+  "main": "ng2-jsgrid.umd.js",
+  "module": "ng2-jsgrid.js",
+  "jsnext:main": "ng2-jsgrid.js",
+  "typings": "ng2-jsgrid.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
